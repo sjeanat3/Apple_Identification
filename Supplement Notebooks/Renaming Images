@@ -1,0 +1,128 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "259a9822",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import os"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "ca304817",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "train_path =  \"./data/fruits-360_dataset/fruits-360/Training\"\n",
+    "test_path = \"./data/fruits-360_dataset/fruits-360/Test\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "c6ecc5ec",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def rename_golden_1(path):\n",
+    "    for pic in os.listdir(path):\n",
+    "        my_dest = \"gold_1_\" + str(pic)\n",
+    "        my_source = path + pic\n",
+    "        my_dest = path + my_dest\n",
+    "        # rename() function will rename all the files\n",
+    "        os.rename(my_source, my_dest)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "979e59c5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "golden_1_train_path = \"./data/fruits-360_dataset/fruits-360/Training/Apple Golden 1/\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "04d58530",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'rename_golden_1' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[0;32mIn[30], line 1\u001b[0m\n\u001b[0;32m----> 1\u001b[0m \u001b[43mrename_golden_1\u001b[49m(golden_1_train_path)\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'rename_golden_1' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "rename_golden_1(golden_1_train_path)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "fcba8768",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['gold_1_gold_1gold_1288.jpg',\n",
+       " 'gold_1_gold_1gold_1277.jpg',\n",
+       " 'gold_1_gold_1gold_1263.jpg',\n",
+       " 'gold_1_gold_1gold_117.jpg',\n",
+       " 'gold_1_gold_1gold_1101.jpg']"
+      ]
+     },
+     "execution_count": 29,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "golden_1_train_dir_list = os.listdir(golden_1_train_path)\n",
+    "golden_1_train_dir_list[:5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c67107dd",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "tensorflow_env",
+   "language": "python",
+   "name": "tensorflow_env"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.15"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
